@@ -11,6 +11,10 @@ android {
     namespace = "com.alishoumar.splashcache"
     compileSdk = 35
 
+    buildFeatures{
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "com.alishoumar.splashcache"
         minSdk = 24
@@ -19,6 +23,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String","API_KEY","${project.findProperty("API_KEY")}")
     }
 
     buildTypes {
