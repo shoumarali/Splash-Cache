@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
 
-interface UnSplashApi {
+interface UnsplashApi {
 
     @Headers("Authorization: Client-ID ${BuildConfig.API_KEY}")
     @GET("/photos")
