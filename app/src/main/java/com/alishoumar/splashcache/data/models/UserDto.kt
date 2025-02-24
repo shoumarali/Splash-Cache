@@ -5,9 +5,9 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class User(
+data class UserDto(
     @SerialName("links")
     @Embedded
-    val userLinks: UserLinks,
+    val userLinks: UserLinksDto,
     val username: String
 )

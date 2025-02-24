@@ -5,18 +5,18 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.alishoumar.splashcache.data.models.UnSplashImage
+import com.alishoumar.splashcache.data.models.UnsplashImageDto
 
 
 @Dao
 interface UnsplashImageDao {
 
     @Query("SELECT * FROM unsplash_image_table")
-    suspend fun getAllImages():PagingSource<Int, UnSplashImage>
+     fun getAllImages():PagingSource<Int, UnsplashImageDto>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addImages(images: List<UnSplashImage>)
+     fun addImages(images: List<UnsplashImageDto>)
 
     @Query("DELETE FROM unsplash_image_table")
-    suspend fun deleteImage()
+     fun deleteAllImages()
 }
